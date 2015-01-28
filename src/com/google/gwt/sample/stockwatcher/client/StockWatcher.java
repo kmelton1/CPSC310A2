@@ -36,8 +36,7 @@ public class StockWatcher implements EntryPoint {
 	private ArrayList<String> stocks = new ArrayList<String>();
 	private LoginInfo loginInfo = null;
 	private VerticalPanel loginPanel = new VerticalPanel();
-	private Label loginLabel = new Label(
-			"Please sign in to your Google Account to access the StockWatcher application.");
+	private Label loginLabel = new Label("Please sign in to your Google Account to access the super-awesome-fantastic StockWatcher application.");
 	private Anchor signInLink = new Anchor("Sign In, if you want to I guess.");
 	private Anchor signOutLink = new Anchor("Sign Out");
 	private final StockServiceAsync stockService = GWT.create(StockService.class);
@@ -153,7 +152,7 @@ public class StockWatcher implements EntryPoint {
 		for (String symbol : symbols) {
 			displayStock(symbol);
 		}
-	} 
+	}
 
 	/**
 	 * Add stock to FlexTable. Executed when the user clicks the addStockButton or
@@ -251,12 +250,12 @@ public class StockWatcher implements EntryPoint {
 	}
 
 	/**
-	 *  Update the Price and Change fields all the rows in the stock table. 
-	 * 
+	 *  Update the Price and Change fields all the rows in the stock table.
+	 *
 	 * @param prices Stock data for all rows.
-	 */ 
-	private void updateTable(StockPrice[] prices) { 
-		for (int i = 0; i < prices.length; i++) { 
+	 */
+	private void updateTable(StockPrice[] prices) {
+		for (int i = 0; i < prices.length; i++) {
 			updateTable(prices[i]); }
 
 		// Display timestamp showing last refresh.
